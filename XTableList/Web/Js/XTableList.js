@@ -1,7 +1,7 @@
 //by:xcl @2012.8  qq:80213876
 ; (function ($) {
     $.extend({
-        XCLTableList: function (options) {
+        XTableList: function (options) {
             options = $.extend({}, funs.Defaults, options);
             funs.Init(options);
             $(options.tableClass).each(function () {
@@ -14,30 +14,30 @@
                 //滑过行颜色
                 if (options.trHoverColor != "") {
                     $trs.hover(function () {
-                        $(this).addClass("XCLTableList_trHover");
+                        $(this).addClass("XTableList_trHover");
                     }, function () {
-                        $(this).removeClass("XCLTableList_trHover");
+                        $(this).removeClass("XTableList_trHover");
                     });
                 }
                 //单击行颜色
                 if (options.trClickColor != "") {
                     $trs.click(function () {
-                        $trs.removeClass("XCLTableList_trClick");
-                        $(this).addClass("XCLTableList_trClick");
+                        $trs.removeClass("XTableList_trClick");
+                        $(this).addClass("XTableList_trClick");
                     });
                 }
                 //奇偶行颜色
                 if (options.trEvenColor != "") {
                     $trs.each(function (i) {
                         if (i % 2 == 0) {
-                            $(this).addClass("XCLTableList_trEven");
+                            $(this).addClass("XTableList_trEven");
                         }
                     });
                 }
                 if (options.trOddColor != "") {
                     $trs.each(function (i) {
                         if (i % 2 == 1) {
-                            $(this).addClass("XCLTableList_trOdd");
+                            $(this).addClass("XTableList_trOdd");
                         }
                     });
                 }
@@ -81,7 +81,7 @@
     });
     var funs = {
         Defaults: {
-            tableClass: ".XCLTableList",//table的class
+            tableClass: ".XTableList",//table的class
             trHoverColor: "#e0ecff",//行滑过时的颜色
             trClickColor: "",//单击行后的颜色
             trNoHoverClass: ".XCLTableNoHover",//无需设置颜色的行class
@@ -93,11 +93,11 @@
         },
         Init: function (options) {
             //样式
-            $("head").append("<style type='text/css'>.XCLTableList_trHover{background:" + options.trHoverColor + "!important;} " +
-                                    ".XCLTableList_trClick{background:" + options.trClickColor + "!important;} " +
-                                    ".XCLTableList_trEven{background:" + options.trEvenColor + ";} " +
-                                    ".XCLTableList_trOdd{background:" + options.trOddColor + ";}" +
-                                    ".XCLTableList_trChecked{background:" + options.checkedTrColor + "!important;}" +
+            $("head").append("<style type='text/css'>.XTableList_trHover{background:" + options.trHoverColor + "!important;} " +
+                                    ".XTableList_trClick{background:" + options.trClickColor + "!important;} " +
+                                    ".XTableList_trEven{background:" + options.trEvenColor + ";} " +
+                                    ".XTableList_trOdd{background:" + options.trOddColor + ";}" +
+                                    ".XTableList_trChecked{background:" + options.checkedTrColor + "!important;}" +
                                     "</style>");
             //当子项都为选中时，此时选中全选项
             $(options.tableClass).each(function () {
@@ -124,10 +124,10 @@
             var v = [];
             ckItem.each(function () {
                 if (this.checked) {
-                    $(this).closest("tr").addClass("XCLTableList_trChecked");
+                    $(this).closest("tr").addClass("XTableList_trChecked");
                     v.push(this.value);
                 } else {
-                    $(this).closest("tr").removeClass("XCLTableList_trChecked");
+                    $(this).closest("tr").removeClass("XTableList_trChecked");
                 }
             });
             ckAll.val(v.toString());

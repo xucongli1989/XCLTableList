@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,7 +60,7 @@
   <ItemGroup>
     <Content Include="Index.html" />
     <Content Include="Js\jquery-1.11.1.min.js" />
-    <Content Include="Js\XCLTableList.js" />
+    <Content Include="Js\XTableList.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
