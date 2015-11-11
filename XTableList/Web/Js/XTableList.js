@@ -84,11 +84,11 @@
             tableClass: ".XTableList",//table的class
             trHoverColor: "#e0ecff",//行滑过时的颜色
             trClickColor: "",//单击行后的颜色
-            trNoHoverClass: ".XCLTableNoHover",//无需设置颜色的行class
+            trNoHoverClass: ".XTableNoHover",//无需设置颜色的行class
             trEvenColor: "#f9f9f9",//偶数行的颜色0开始
             trOddColor: "",//奇数行的颜色
-            checkAllClass: ".XCLTableCheckAll",//全选按钮class
-            checkItemClass: ".XCLTableCheckItem",//选择框的class
+            checkAllClass: ".XTableCheckAll",//全选按钮class
+            checkItemClass: ".XTableCheckItem",//选择框的class
             checkedTrColor: "#fffec9"//选中行的颜色
         },
         Init: function (options) {
